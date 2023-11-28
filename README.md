@@ -5,6 +5,6 @@
 ## all changes
 `git add .`
 ## committing
-`git commit =am "commit message"`
+`git commit -am "commit message"`
 ## pushing
 `git push`
