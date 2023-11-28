@@ -15,9 +15,9 @@ public class Book {
 
     public string title = "";
 
-    public int currentPage = 1;
+    public int currentPage = 0;
 
-    public static Page[]? pages;
+    public List<Page> pages = new List<Page>();
 
     public void CreateNewPage(string newContent, int newNumber) {
         Page newPage = new Page();
@@ -25,21 +25,22 @@ public class Book {
         newPage.content = newContent;
         newPage.pageNumber = newNumber;
 
-        pages?.Append(newPage);
+        pages.Add(newPage);
     }
 
     public void OpenBook(Book requestedBook) {
         Console.Clear();
+        Console.WriteLine(pages.Count());
         Console.WriteLine(requestedBook.title);
-        Console.ReadLine();
+        Console.ReadKey();
         DisplayPage(currentPage);
     }
 
     public void DisplayPage(int pageRequest) {
         currentPage = pageRequest;
         Console.Clear();
-        Console.WriteLine(pages?[pageRequest].content);
-        Console.WriteLine(pages?[pageRequest].pageNumber.ToString());
+        Console.WriteLine(pages[pageRequest].content);
+        Console.WriteLine(pages[pageRequest].pageNumber.ToString());
         Console.WriteLine("");
         Console.WriteLine("next to continue, close to exit: ");
         string? input = Console.ReadLine();
@@ -47,6 +48,11 @@ public class Book {
         if(input != null) {
             if(input == "next") {
                 DisplayPage(pageRequest + 1);
+            } 
+            else if(input == "close") {
+                Library.StartLibrary();
+            } else if(pageRequest + 1 > pages.Count()) {
+                Library.JustFinishedBook();
             }
         } else {
             Library.StartLibrary();
@@ -57,7 +63,7 @@ public class Book {
 
 public class Library {
 
-    public static Book[] library = new Book[3];
+    public static List<Book> library = new List<Book>();
 
     static void Main(string[] args) {
         SetUpBooks();
@@ -78,35 +84,45 @@ public class Library {
         book2.CreateNewPage("the end of bing bong 😭", 3);
 
         Book book3 = new Book();
-        book3.title = "the last book ";
+        book3.title = "the last book";
         book3.CreateNewPage("this is insane", 1);
         book3.CreateNewPage("page 2 😱 omg", 2);
         book3.CreateNewPage("the end 😭 so sad", 3);
 
-        library.Append(book1);
-        library.Append(book2);
-        library.Append(book3);
+        library.Add(book1);
+        library.Add(book2);
+        library.Add(book3);
 
     }
 
     public static void StartLibrary() {
         Console.Clear();
-        Console.WriteLine(library[0].title);
+
         Console.WriteLine("Current books:");
         Console.WriteLine("the first book");
         Console.WriteLine("the book of bing bong");
         Console.WriteLine("the last book");
         Console.WriteLine("");
+        Console.WriteLine("Type the name of the book or close to exit the library: ");
         var input = Console.ReadLine();
-        Console.WriteLine(input);
-        foreach(Book book in library) {
-            Console.WriteLine("yes");
-            book.OpenBook(book);
+
+        if(input == "close") {
+            Console.WriteLine("Thank you for using the Library!");
+            Environment.Exit(0);
         }
-        
+
+        foreach(Book book in library) {
+            if(book.title == input) {
+                book.OpenBook(book);
+            }
+        }
+        Console.WriteLine("Could not find a book with that name, soryy!");
+        Console.ReadKey();
+        StartLibrary();
     }
-    static void JustFinishedBook() {
+    public static void JustFinishedBook() {
         Console.WriteLine("Book finished!");
         Console.ReadKey();
+        StartLibrary();
     }
 }
