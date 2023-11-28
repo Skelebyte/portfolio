@@ -1,0 +1,15 @@
+Z:\Code\Portfolio\portfolio\C#\BookLib\bin\Debug\net8.0\portfolio.exe
+Z:\Code\Portfolio\portfolio\C#\BookLib\bin\Debug\net8.0\portfolio.deps.json
+Z:\Code\Portfolio\portfolio\C#\BookLib\bin\Debug\net8.0\portfolio.runtimeconfig.json
+Z:\Code\Portfolio\portfolio\C#\BookLib\bin\Debug\net8.0\portfolio.dll
+Z:\Code\Portfolio\portfolio\C#\BookLib\bin\Debug\net8.0\portfolio.pdb
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\portfolio.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\portfolio.AssemblyInfoInputs.cache
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\portfolio.AssemblyInfo.cs
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\portfolio.csproj.CoreCompileInputs.cache
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\portfolio.sourcelink.json
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\portfolio.dll
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\refint\portfolio.dll
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\portfolio.pdb
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\portfolio.genruntimeconfig.cache
+Z:\Code\Portfolio\portfolio\C#\BookLib\obj\Debug\net8.0\ref\portfolio.dll
