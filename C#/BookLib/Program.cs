@@ -116,7 +116,7 @@ public class Library {
                 book.OpenBook(book);
             }
         }
-        Console.WriteLine("Could not find a book with that name, soryy!");
+        Console.WriteLine("Could not find a book with that name, sorry!");
         Console.ReadKey();
         StartLibrary();
     }
