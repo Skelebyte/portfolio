@@ -8,3 +8,5 @@
 `git commit -am "commit message"`
 ## pushing
 `git push`
+## pulling
+`git pull`
